@@ -1,0 +1,21 @@
+{% extends "partials/base.html" %}
+{% block title %} Home Page {% endblock title %}
+{% load crispy_forms_tags %}
+{% block content %}
+
+<div class="header-bar">
+    <a href="{% url 'tasks' %}">&#8592; Go back</a>
+
+</div>
+
+<div class="card-body">
+    <form action="" method="POST">
+        {% csrf_token %}
+        <p>Are you sure you want to dlete this task?  "{{task}} </p>
+        {{form | crispy}}
+        <input class="btn" type="submit" value="Detele">
+    </form>
+</div>
+                
+
+{% endblock %}

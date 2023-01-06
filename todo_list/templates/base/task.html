@@ -1,0 +1,20 @@
+{% extends "partials/base.html" %}
+{% block title %} Home Page {% endblock title %}
+{% load crispy_forms_tags %}
+{% block content %}
+
+                <h3>
+                    Todo List Detail
+                </h3>
+                <table>
+                    <tr>
+                        <th>Item</th>
+                    </tr>
+                   <td>{{task}}</td>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
